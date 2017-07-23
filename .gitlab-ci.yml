@@ -12,7 +12,3 @@ pages:
     - public
   only:
   - master
-tls:
-  script:
-    - npm install -g gitlab-letsencrypt-hexo
-    - gitlab-le-hexo --email ycrxun@163.com --domain ronggle.com --repository ycrxun/ycrxun.gitlab.io --token $TOKEN

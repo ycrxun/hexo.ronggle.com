@@ -1,6 +1,7 @@
 ---
 title: WebService学习记录
 date: 2017-02-12 19:32:45
+category: 技术宅
 tags: Java
 ---
 

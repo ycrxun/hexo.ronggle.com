@@ -4,9 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-	<meta name="author" content="<%= config.author %>">
-    <meta name="description" content="<%= config.description %>">
-    <meta name="keywords" content="<%= config.description %>">
+	<meta name="author" content="<%= config.author %>">   
     <%- open_graph({
         image:          thumbnail(page),
         fb_app_id:      theme.miscellaneous.open_graph.fb_app_id,
@@ -38,33 +36,19 @@
           <% } %>
         <% } %>
     <% } %>
-    <!-- title -->
     <%
-        var title = page.title;
-
-        if (is_archive()) {
-            title = __('sidebar.archive');
-
-            if (is_month()) {
-                title += ': ' + page.year + '/' + page.month;
-            }
-            else if (is_year()) {
-                title += ': ' + page.year;
-            }
+        var title = [];
+        if (page.current > 1) title.push(__('page', page.current));
+        if (page.title) title.push(page.title);
+        if (page.category) title.push(page.category);
+        if (page.tag) title.push(page.tag);
+        if (page.archive) {
+            if (page.year) title.push(__('archive_b', page.year + (page.month ? '/' + page.month : '')));
+            else title.push(__('archive_a'));
         }
-        else if (is_category()) {
-            title = __('title.category') + ': ' + page.category;
-        }
-        else if (is_tag()) {
-            title = __('title.tag') + ': ' + page.tag;
-        }
+        title.push(config.title);
     %>
-    <title>
-        <% if (title) { %>
-            <%= title + ' | ' %>
-        <% } %>
-        <%= config.title %>
-    </title>
+    <title><%= title.join(' - ') %></title>
     <!-- styles -->
     <%- css('css/style') %>
     <!-- rss -->
