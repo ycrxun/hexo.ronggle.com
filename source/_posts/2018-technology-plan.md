@@ -25,6 +25,9 @@ tags:
 - 《领域驱动设计》
 - 《微服务架构与实践》
 
+## 课程学习
+- CKA
+
 ## 技术学习
 - Consul
 - Golang
@@ -34,6 +37,8 @@ tags:
 - OpenID Connect
 - K8s
 - Docker
+- Nodejs
+- Python
 
 ## 项目计划
 - [onion](https://github.com/ycrxun/onion)
