@@ -1,6 +1,7 @@
 ---
 title: consul学习二-集群
 date: 2018-01-15 21:42:19
+category: Consul
 tags:
     - 服务注册
     - 服务发现

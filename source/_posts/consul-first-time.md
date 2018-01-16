@@ -1,7 +1,7 @@
 ---
 title: consul学习一-初见
 date: 2018-01-07 19:38:00
-category: 技术宅
+category: Consul
 tags:
     - 服务注册
     - 服务发现
