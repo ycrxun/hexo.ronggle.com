@@ -322,7 +322,13 @@ changyan:
   enable: false
   appid:
   appkey:
-
+  
+gitment:
+  enable: true
+  owner: ycrxun
+  repo: axiba
+  client_id: a2f917f5cb45d6dffe92
+  client_secret: 879169dfceea28b064c49ef7fd190cdafcc6e5a7
 # Support for youyan comments system.
 # You can get your uid from http://www.uyan.cc
 #youyan_uid: your uid
@@ -538,7 +544,7 @@ canvas_sphere: false
 
 # Only fit scheme Pisces
 # Canvas-ribbon
-canvas_ribbon: false
+canvas_ribbon: true
 
 # Script Vendors.
 # Set a CDN address for the vendor you want to customize.
