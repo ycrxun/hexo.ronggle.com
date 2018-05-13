@@ -4,7 +4,7 @@ pages:
     paths:
       - node_modules/
   before_script:
-    - npm install hexo-cli -g
+    - npm install hexo-cli
   script:
     - hexo -v
     - npm install
