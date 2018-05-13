@@ -2,13 +2,13 @@ image: node:4.5.0
 pages:
   cache:
     paths:
-    - node_modules/
+      - node_modules/
   script:
-  - npm install hexo-cli -g
-  - npm install
-  - hexo deploy
+    - npm install hexo-cli -g
+    - npm install
+    - hexo deploy
   artifacts:
     paths:
-    - public
+      - public
   only:
-  - master
+    - master
