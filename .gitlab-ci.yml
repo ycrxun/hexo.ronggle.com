@@ -1,10 +1,12 @@
-image: node:4.5.0
+image: node:8.11.1
 pages:
   cache:
     paths:
       - node_modules/
-  script:
+  before_script:
     - npm install hexo-cli -g
+  script:
+    - hexo -v
     - npm install
     - hexo deploy
   artifacts:
